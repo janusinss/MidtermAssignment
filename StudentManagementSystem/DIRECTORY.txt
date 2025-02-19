@@ -1,0 +1,3 @@
+cd C:\xampp\htdocs\StudentManagementSystem\SMSProject
+
+{% csrf_token %}

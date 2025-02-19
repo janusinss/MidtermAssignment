@@ -1,0 +1,98 @@
+Install
+  pip install pipenv
+
+Run the Virtual Environment
+  pipenv shell
+
+Download the latest DJANGO
+  pip install django
+
+Make a DJANGO FILE
+  django-admin startproject MyProject
+
+#If making an app always go inside the directory of the Project
+  cd C:\xampp\htdocs\django3\MyProject
+#Then check files if the Inner MyProject and manage.py is listed
+  lsInstall
+  pip install pipenv
+
+Run the Virtual Environment
+  pipenv shell
+
+Download the latest DJANGO
+  pip install django
+
+Make a DJANGO FILE
+  django-admin startproject MyProject
+
+#If making an app always go inside the directory of the Project
+  cd C:\xampp\htdocs\django3\MyProject
+#Then check files if the Inner MyProject and manage.py is listed
+  ls
+
+Make an APP
+  py manage.py startapp MyApp
+
+Start an APP
+  py manage.py runserver
+
+For Migration File to Change because of MODELS
+  py manage.py makemigrations
+  py manage.py migrate
+
+#VIEWS
+from django.shortcuts import render, redirect
+from .models import Students
+from .models import Books
+
+#URLS
+from django.urls import path
+from . import views
+
+#MODELS
+from django.db import models
+from .models import models
+
+---------------------------------------------------------
+
+******* Intalling/Connecting MYSQL and DJANGO *******
+
+pipenv shell
+
+cd C:\xampp\htdocs\django3\MyProject
+
+pipenv install mysqlclient
+
+py manage.py migrate
+
+#go to admin then insert/make classes to input to check in mysql database
+
+#also change the database from settings.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myData',
+        'USER': 'root',
+        'PASSWORD': '',
+        'Host': 'localhost',
+        'PORT': '3306'
+    }
+}
+
+py manage.py makemigrations
+py manage.py migrate
+----------------------------------------------------------
+
+Make an APP
+  py manage.py startapp MyApp
+
+Start an APP
+  py manage.py runserver
+
+LS to 
+  py manage.py makemigrations
+  py manage.py migrate
+
+PYTHON interpreter access in terminal
+  py / python
+------------------------------------------------------
