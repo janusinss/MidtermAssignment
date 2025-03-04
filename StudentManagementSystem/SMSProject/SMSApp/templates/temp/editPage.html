@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System Edit Page</title>
+    <link rel="stylesheet" href="{% static 'styles/editStyles.css' %}">
+</head>
+<body>
+    <h1>EDIT STUDENT</h1>
+    <form action="updateStudent/" method="post">
+        {% csrf_token %}
+        <label for="FirstName">First Name</label>
+        <input type="text" id="FirstName" name="FirstName" value="{{ Student.FirstName }}" required>
+        <label for="LastName">Last Name</label> 
+        <input type="text" id="LastName" name="LastName" value="{{ Student.LastName }}" required>
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" value="{{ Student.Email }}" required>
+        <label for="DateOfBirth">Date Of Birth</label>
+        <input type="date" id="DateOfBirth" name="DateOfBirth" value="{{ Student.DateOfBirth }}" required>
+        <label for="Course">Course</label>
+        <input type="text" id="Course" name="Course" value="{{ Student.Course }}" required>
+        <label for="EnrollmentDate">Enrollment Date</label>
+        <input type="date" id="EnrollmentDate" name="EnrollmentDate" value="{{ Student.EnrollmentDate }}" required>
+
+        <input class="submit" type="submit" value="Submit">
+    </form>
+</body>
+</html>
